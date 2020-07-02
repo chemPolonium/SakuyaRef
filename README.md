@@ -1,5 +1,7 @@
 # Sakuya Reference
 
+![screenshot](screenshot.png)
+
 [English Version](#Sakuya-Ref-Eng-Ver)
 
 这是一个非常无聊的个人用的文献查看器，只是方便查看 bib 文件用的。
