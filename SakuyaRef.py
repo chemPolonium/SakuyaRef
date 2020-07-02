@@ -121,5 +121,6 @@ def popup(event):
 
 tree.bind('<Button-3>', popup)
 tree.bind('<Return>', view_pdf)
+tree.bind('<Double-Button-1>', view_pdf)
 
 root.mainloop()
