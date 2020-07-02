@@ -1,5 +1,7 @@
 # Sakuya Reference
 
+[English Version](#Sakuya-Ref-Eng-Ver)
+
 这是一个非常无聊的个人用的文献查看器，只是方便查看 bib 文件用的。
 
 为什么 Zotero 免费只给 300M
@@ -29,10 +31,54 @@ clone 以后，把唯一的一个 py 文件里面的 paperdir 改成你自己的
 
 在条目上回车，或者是在条目右键上选择 view pdf 就可以了。
 
-# clear bind
+# 清除绑定
 
 这个会把之前绑定文件时候复制的文件删掉。
 
 # 复制文章标题
 
 选中单个条目后右键会出现 copy title，选择后就可以复制标题了。
+
+# 待实现
+
+删除条目
+编辑条目信息（大概率不会写，我习惯直接编辑 bib 文件）
+
+# Sakuya Ref Eng Ver
+
+A bibtex file viewer.
+
+Zotero is free for only 300MB.
+
+Jabref installation file is so large.
+
+# Supported OS
+
+Only tested on my windows 10.
+
+I use a 4K screen, so I added a windll.shcore.SetProcessDpiAwareness(1) in the code.
+
+# How to run
+
+Dependences
+- bibtexparser
+- tkinter
+- pyperclip
+
+Clone it. Change paperdir. Copy your bib file into this dir. Run the python script.
+
+# Bind file
+
+Right click on a single item. Select 'bind pdf'. Selected file will be copyed into paperdir. Named 'ID.pdf' where ID is the ID in bib file.
+
+# View pdf
+
+Right click the item and select 'view pdf'. Or double click the item. Or select the item and hit 'enter'.
+
+# Clear bind
+
+Delete the binded file in paperdir.
+
+# Copy title
+
+Right click item, then select 'copy title' to copy title.
