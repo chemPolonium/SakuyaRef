@@ -81,7 +81,8 @@ def view_pdf(*event):
 
 def clear_bind():
     print(tree.set(tree.selection(), 'ID'), 'clear bind')
-    os.remove(os.path.join(paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
+    os.remove(os.path.join(
+        paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
 
 
 def delete_entry():
