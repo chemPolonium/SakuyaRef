@@ -7,9 +7,10 @@ from ctypes import windll
 import shutil
 import os
 
-paperdir = 'C:\\Users\\polonium\\OneDrive\\论文库'
+paperlib_dir = 'C:\\Users\\polonium\\OneDrive\\论文库'
+bibfile_name = 'mylib.bib'
 
-with open(os.path.join(paperdir, 'mylib.bib'),
+with open(os.path.join(paperlib_dir, bibfile_name),
           encoding='utf-8') as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file)
 
@@ -69,17 +70,18 @@ def bind_pdf():
     bindfile_name = filedialog.askopenfilename()
     if len(bindfile_name) != 0:
         shutil.copyfile(bindfile_name, os.path.join(
-            paperdir, tree.set(tree.selection(), 'ID') + '.pdf'))
+            paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
 
 
 def view_pdf(*event):
     print(tree.set(tree.selection(), 'ID'), 'view pdf')
     os.system(os.path.join(
-        paperdir, tree.set(tree.selection(), 'ID') + '.pdf'))
+        paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
 
 
 def clear_bind():
     print(tree.set(tree.selection(), 'ID'), 'clear bind')
+    os.remove(os.path.join(paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
 
 
 def delete_entry():
