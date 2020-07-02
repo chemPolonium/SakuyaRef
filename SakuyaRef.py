@@ -6,6 +6,7 @@ import bibtexparser
 from ctypes import windll
 import shutil
 import os
+import pyperclip
 
 paperlib_dir = 'C:\\Users\\polonium\\OneDrive\\论文库'
 bibfile_name = 'mylib.bib'
@@ -94,9 +95,14 @@ def delete_entry_multi():
         print(tree.set(item, 'ID'), 'delete entry')
 
 
+def copy_title():
+    pyperclip.copy(tree.set(tree.selection(), 'title'))
+
+
 menu_on_single = tk.Menu(root, tearoff=0)
 menu_on_single.add_command(label='bind pdf', command=bind_pdf)
 menu_on_single.add_command(label='view pdf', command=view_pdf)
+menu_on_single.add_command(label='copy title', command=copy_title)
 menu_on_single.add_command(label='clear bind', command=clear_bind)
 menu_on_single.add_command(label='delete', command=delete_entry)
 

@@ -17,6 +17,7 @@
 依赖项
 - bibtexparser
 - tkinter
+- pyperclip
 
 clone 以后，把唯一的一个 py 文件里面的 paperdir 改成你自己的用来放论文的文件夹，然后把你的 bib 文件放进这个文件夹，运行这个 py 文件。
 
@@ -31,3 +32,7 @@ clone 以后，把唯一的一个 py 文件里面的 paperdir 改成你自己的
 # clear bind
 
 这个会把之前绑定文件时候复制的文件删掉。
+
+# 复制文章标题
+
+选中单个条目后右键会出现 copy title，选择后就可以复制标题了。
