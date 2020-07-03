@@ -76,7 +76,7 @@ def bind_pdf():
 
 def view_pdf(*event):
     print(tree.set(tree.selection(), 'ID'), 'view pdf')
-    os.system(os.path.join(
+    os.system('start ' + os.path.join(
         paperlib_dir, tree.set(tree.selection(), 'ID') + '.pdf'))
 
 
