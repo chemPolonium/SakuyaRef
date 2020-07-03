@@ -25,6 +25,8 @@
 
 clone 以后，把唯一的一个 py 文件里面的 paperdir 改成你自己的用来放论文的文件夹，然后把你的 bib 文件放进这个文件夹，运行这个 py 文件。
 
+我习惯创建一个 bat 文件，在里面输入 'start pythonw path-to-this-folder\SakuyaRef.py'.
+
 # 绑定文件
 
 在单个条目上右键有一个 bind pdf 的选项，选择 PDF 文件后，会自动把 PDF 文件复制到 paperdir 中，同时文件名改成 bib 文件中的 ID。
@@ -68,6 +70,8 @@ Dependences
 - pyperclip
 
 Clone it. Change paperdir. Copy your bib file into this dir. Run the python script.
+
+I tend to create a bat file and type 'start pythonw path-to-this-folder\SakuyaRef.py'.
 
 # Bind file
 
