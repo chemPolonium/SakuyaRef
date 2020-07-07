@@ -15,9 +15,13 @@ with open(os.path.join(paperlib_dir, bibfile_name),
           encoding='utf-8') as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file)
 
-bibList = [
-    (bib['ID'], bib['author'], bib['title'], bib['journal'], bib['year'])
-    for bib in bib_database.entries]
+bib_list = [
+    (bib_item['ID'],
+     bib_item['author'],
+     bib_item['title'],
+     bib_item.get('journal', ''),
+     bib_item.get('year', ''))
+    for bib_item in bib_database.entries]
 
 windll.shcore.SetProcessDpiAwareness(1)
 
@@ -61,8 +65,8 @@ tree.column('journal', width=int(0.25*root.winfo_width()))
 tree.heading_with_sort('year')
 tree.column('year', width=int(0.05*root.winfo_width()), anchor='center')
 
-for bibItem in bibList:
-    tree.insert('', 'end', values=bibItem)
+for bib_item in bib_list:
+    tree.insert('', 'end', values=bib_item)
 tree.pack(fill='both', expand=True)
 
 
