@@ -12,8 +12,8 @@ paperlib_dir = 'C:\\Users\\polonium\\OneDrive\\论文库'
 bibfile_name = 'mylib.bib'
 
 with open(os.path.join(paperlib_dir, bibfile_name),
-          encoding='utf-8') as bibtex_file:
-    bib_database = bibtexparser.load(bibtex_file)
+          encoding='utf-8') as bib_file:
+    bib_database = bibtexparser.load(bib_file)
 
 bib_list = [
     (bib_item['ID'],
