@@ -29,7 +29,7 @@ root = tk.Tk()
 root.state("zoomed")
 root.title("SakuyaRef")
 root.update()
-style = ttk.Style(root                                                                 )
+style = ttk.Style(root)
 style.configure("Treeview", rowheight=40)
 
 
